@@ -63,11 +63,12 @@ h1{
     color: var(--Grayish-blue);
 }
 .digit{
+    text-align: center;
     background-color: var(--Dark-desaturated-blue);
     color: var(--Soft-red);
     font-size: clamp(2.7rem, -0.875rem + 8.333vw, 20.5rem);
     border-radius: 4%;
-    padding: 0 1.3rem;
+    width: clamp(6rem, -0.875rem + 14.333vw, 70rem);
 }
 footer{
     margin-bottom: -10rem;
