@@ -36,6 +36,8 @@ h1{
     text-transform: uppercase;
     color: var(--White);
     margin-bottom: 3rem;
+    font-size: clamp(3rem, -0.875rem + 3.8vw, 13rem);
+    text-align: center;
 }
 .container{
     display: flex;

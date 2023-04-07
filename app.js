@@ -1,13 +1,14 @@
 var second = 0,
   minute = 0,
   hour = 0,
-  day = 100;
+  day = 100; // Number of days before product lanching
 
 var displaySeconds = document.getElementById("second");
 var displayMinutes = document.getElementById("minute");
 var displayHours = document.getElementById("hour");
 var displayDays = document.getElementById("day");
 
+// Displays time to DOM
 function displayTime() {
   second < 10
     ? (displaySeconds.textContent = "0" + second.toString())
@@ -21,8 +22,19 @@ function displayTime() {
   day < 10
     ? (displayDays.textContent = "0" + day.toString())
     : (displayDays.textContent = day);
+    console.log(displaySeconds.textContent);
 }
 
+//Handle time coutdown when time for launching is set
+function timeFinished(){
+    second = 0;
+    minute = 0;
+    hour = 0;
+    day = 0;
+    displayTime();
+}
+
+// Handles timer counting
 function Timer() {
   displayTime();
   second--;
@@ -38,6 +50,9 @@ function Timer() {
     hour = 23;
     day--;
   }
+//   if (second == 0 && minute == 0 && hour == 0 && day == 0)
+//     clearInterval(timeInterval)
+//     timeFinished();
 }
 
 const timeInterval = setInterval(() => {
